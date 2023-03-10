@@ -80,7 +80,7 @@ public class BeerOrderServiceImpl implements BeerOrderService {
             beerOrder.setOrderStatus(OrderStatusEnum.NEW);
 
             beerOrder.getBeerOrderLines().forEach(line -> line.setBeerOrder(beerOrder));
-
+            System.out.println(beerOrder);
             BeerOrder savedBeerOrder = beerOrderRepository.saveAndFlush(beerOrder);
 
             log.debug("Saved Beer Order: " + beerOrder.getId());

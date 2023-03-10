@@ -46,6 +46,8 @@ public class TastingRoomService {
             doPlaceOrder(customerList.get(0));
         } else {
             log.error("Too many or too few tasting room customers found");
+
+            customerList.forEach(customer -> log.debug(customer.toString()));
         }
     }
 
@@ -71,6 +73,6 @@ public class TastingRoomService {
     }
 
     private String getRandomBeerUpc() {
-        return beerUpcs.get(new Random().nextInt(beerUpcs.size()));
+        return beerUpcs.get(new Random().nextInt(beerUpcs.size() -0));
     }
 }
