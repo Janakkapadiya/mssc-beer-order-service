@@ -10,6 +10,7 @@ guru/sfg/beer/order/service/web/model/BeerDto$BeerDtoBuilder.class
 guru/sfg/beer/order/service/web/model/CustomerDto$CustomerDtoBuilder.class
 guru/sfg/beer/order/service/web/mappers/BeerOrderLineMapperImpl_.class
 guru/sfg/beer/order/service/web/model/OrderStatusUpdate$OrderStatusUpdateBuilder.class
+guru/sfg/beer/order/service/web/mappers/BeerOrderMapperImpl$1.class
 guru/sfg/beer/order/service/web/model/CustomerDto.class
 guru/sfg/beer/order/service/web/model/BeerOrderDto.class
 guru/sfg/beer/order/service/web/model/BeerOrderLineDto$BeerOrderLineDtoBuilder.class
