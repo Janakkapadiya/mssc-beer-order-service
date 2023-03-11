@@ -10,12 +10,12 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-11T14:35:59+0530",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Private Build)"
+    date = "2023-03-11T18:38:21+0530",
+    comments = "version: 1.3.0.Final, compiler: javac, environment: Java 17.0.6 (Private Build)"
 )
 @Component
 @Primary
-public class BeerOrderLineMapperImpl extends BeerOrderLineMapperDecorator {
+public class BeerOrderLineMapperImpl extends BeerOrderLineMapperDecorator implements BeerOrderLineMapper {
 
     @Autowired
     @Qualifier("delegate")

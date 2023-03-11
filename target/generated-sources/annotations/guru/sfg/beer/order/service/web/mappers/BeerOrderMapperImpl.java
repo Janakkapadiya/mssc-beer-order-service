@@ -1,13 +1,15 @@
 package guru.sfg.beer.order.service.web.mappers;
 
 import guru.sfg.beer.order.service.domain.BeerOrder;
+import guru.sfg.beer.order.service.domain.BeerOrder.BeerOrderBuilder;
 import guru.sfg.beer.order.service.domain.BeerOrderLine;
 import guru.sfg.beer.order.service.domain.Customer;
 import guru.sfg.beer.order.service.web.model.BeerOrderDto;
+import guru.sfg.beer.order.service.web.model.BeerOrderDto.BeerOrderDtoBuilder;
 import guru.sfg.beer.order.service.web.model.BeerOrderLineDto;
 import guru.sfg.beer.order.service.web.model.OrderStatusEnum;
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.UUID;
@@ -17,8 +19,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-11T14:35:59+0530",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.6 (Private Build)"
+    date = "2023-03-11T18:38:21+0530",
+    comments = "version: 1.3.0.Final, compiler: javac, environment: Java 17.0.6 (Private Build)"
 )
 @Component
 public class BeerOrderMapperImpl implements BeerOrderMapper {
@@ -34,7 +36,7 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
             return null;
         }
 
-        BeerOrderDto.BeerOrderDtoBuilder beerOrderDto = BeerOrderDto.builder();
+        BeerOrderDtoBuilder beerOrderDto = BeerOrderDto.builder();
 
         beerOrderDto.customerId( beerOrderCustomerId( beerOrder ) );
         beerOrderDto.id( beerOrder.getId() );
@@ -57,7 +59,7 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
             return null;
         }
 
-        BeerOrder.BeerOrderBuilder beerOrder = BeerOrder.builder();
+        BeerOrderBuilder beerOrder = BeerOrder.builder();
 
         beerOrder.id( dto.getId() );
         if ( dto.getVersion() != null ) {
@@ -126,7 +128,7 @@ public class BeerOrderMapperImpl implements BeerOrderMapper {
             return null;
         }
 
-        Set<BeerOrderLine> set = new LinkedHashSet<BeerOrderLine>( Math.max( (int) ( list.size() / .75f ) + 1, 16 ) );
+        Set<BeerOrderLine> set = new HashSet<BeerOrderLine>( Math.max( (int) ( list.size() / .75f ) + 1, 16 ) );
         for ( BeerOrderLineDto beerOrderLineDto : list ) {
             set.add( beerOrderLineMapper.dtoToBeerOrderLine( beerOrderLineDto ) );
         }
