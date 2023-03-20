@@ -16,7 +16,6 @@
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/statemachine/BeerOrderStateMachineConfig.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/bootstrap/BeerOrderBootStrap.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/repositories/BeerOrderLineRepository.java
-/home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/model/BaseItem.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/services/beer/impl/BeerServiceImpl.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/BeerOrderServiceApplication.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/controllers/BeerOrderController.java
@@ -25,7 +24,6 @@
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/model/OrderStatusUpdate.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/domain/BeerOrderLine.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/mappers/DateMapper.java
-/home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/model/OrderStatusEnum.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/repositories/BeerOrderRepository.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/services/BeerOrderServiceImpl.java
 /home/janak/Desktop/workspace/pocs/microservice project/mssc-beer-order-service/src/main/java/guru/sfg/beer/order/service/web/mappers/BeerOrderMapper.java
