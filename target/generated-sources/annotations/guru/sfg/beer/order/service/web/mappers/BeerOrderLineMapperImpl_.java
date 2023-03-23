@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-20T16:51:36+0530",
+    date = "2023-03-23T16:49:03+0530",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 17.0.6 (Private Build)"
 )
 @Component
@@ -38,6 +38,7 @@ public class BeerOrderLineMapperImpl_ implements BeerOrderLineMapper {
         beerOrderLineDto.upc( line.getUpc() );
         beerOrderLineDto.beerId( line.getBeerId() );
         beerOrderLineDto.orderQuantity( line.getOrderQuantity() );
+        beerOrderLineDto.quantityAllocated( line.getQuantityAllocated() );
 
         return beerOrderLineDto.build();
     }
@@ -59,6 +60,7 @@ public class BeerOrderLineMapperImpl_ implements BeerOrderLineMapper {
         beerOrderLine.beerId( dto.getBeerId() );
         beerOrderLine.upc( dto.getUpc() );
         beerOrderLine.orderQuantity( dto.getOrderQuantity() );
+        beerOrderLine.quantityAllocated( dto.getQuantityAllocated() );
 
         return beerOrderLine.build();
     }

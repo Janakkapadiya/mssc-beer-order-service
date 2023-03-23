@@ -1,17 +1,15 @@
 package guru.sfg.beer.order.service.web.model.events;
 
+import guru.sfg.beer.order.service.web.model.BeerOrderDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class ValidateOrderResult {
-    private UUID orderId;
-    private Boolean isValid;
+public class DeallocateOrderRequest {
+    private BeerOrderDto beerOrderDto;
 }

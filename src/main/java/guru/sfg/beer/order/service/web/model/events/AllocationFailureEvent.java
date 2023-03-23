@@ -8,10 +8,9 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class ValidateOrderResult {
+public class AllocationFailureEvent {
     private UUID orderId;
-    private Boolean isValid;
 }

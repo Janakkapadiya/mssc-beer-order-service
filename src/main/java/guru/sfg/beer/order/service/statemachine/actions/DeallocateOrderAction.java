@@ -7,7 +7,7 @@ import guru.sfg.beer.order.service.domain.BeerOrderStatusEnum;
 import guru.sfg.beer.order.service.repositories.BeerOrderRepository;
 import guru.sfg.beer.order.service.services.BeerOrderManagerImpl;
 import guru.sfg.beer.order.service.web.mappers.BeerOrderMapper;
-import guru.sfg.beer.order.service.web.model.events.AllocateOrderRequest;
+import guru.sfg.beer.order.service.web.model.events.DeallocateOrderRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
@@ -19,9 +19,9 @@ import java.util.Optional;
 import java.util.UUID;
 
 @Slf4j
-@Component
 @RequiredArgsConstructor
-public class AllocateOrderAction implements Action<BeerOrderStatusEnum, BeerOrderEventEnum> {
+@Component
+public class DeallocateOrderAction implements Action<BeerOrderStatusEnum, BeerOrderEventEnum> {
 
     private final JmsTemplate jmsTemplate;
     private final BeerOrderRepository beerOrderRepository;
@@ -33,11 +33,11 @@ public class AllocateOrderAction implements Action<BeerOrderStatusEnum, BeerOrde
         Optional<BeerOrder> beerOrderOptional = beerOrderRepository.findById(UUID.fromString(beerOrderId));
 
         beerOrderOptional.ifPresentOrElse(beerOrder -> {
-            jmsTemplate.convertAndSend(JmsConfig.ALLOCATE_ORDER_QUEUE,
-                    AllocateOrderRequest.builder()
+            jmsTemplate.convertAndSend(JmsConfig.DEALLOCATE_ORDER_QUEUE,
+                    DeallocateOrderRequest.builder()
                             .beerOrderDto(beerOrderMapper.beerOrderToDto(beerOrder))
                             .build());
-            log.debug("Sent Allocation Request for order id: " + beerOrderId);
+            log.debug("Sent Deallocation Request for order id: " + beerOrderId);
         }, () -> log.error("Beer Order Not Found!"));
     }
 }
