@@ -1,0 +1,5 @@
+com/sfg/services/testComponents/BeerOrderAllocationListener.class
+com/sfg/services/BeerOrderManagerImplIT.class
+com/sfg/BeerOrderServiceApplicationTests.class
+com/sfg/services/BeerOrderManagerImplIT$RestTemplateBuilderProvider.class
+com/sfg/services/testComponents/BeerOrderValidationListener.class
